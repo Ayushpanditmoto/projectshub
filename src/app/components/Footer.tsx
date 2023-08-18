@@ -73,7 +73,7 @@ function Footer() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 512 512"
               className="h-6 w-6 text-[#00aced] hover:text-gray-500"
               height="1em"
@@ -92,7 +92,7 @@ function Footer() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 576 512"
               className="h-6 w-6 text-red-600 hover:text-black"
               height="1em"
@@ -111,7 +111,7 @@ function Footer() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 496 512"
               className="h-6 w-6 text-[#666666] hover:text-gray-500"
               height="1em"
@@ -125,7 +125,7 @@ function Footer() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 448 512"
               className="h-6 w-6 text-[#ee802f] hover:text-gray-500"
               height="1em"
