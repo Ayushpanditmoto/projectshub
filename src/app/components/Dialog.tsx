@@ -1,7 +1,8 @@
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import { motion } from "framer-motion";
 
-export default function MyModal({ isOpen, setUnderDev }:any) {
+export default function MyModal({ isOpen, setUnderDev }: any) {
   function closeModal() {
     setUnderDev(false);
   }
@@ -20,7 +21,7 @@ export default function MyModal({ isOpen, setUnderDev }:any) {
             enterFrom="opacity-0"
             enterTo="opacity-100"
             leave="ease-in duration-200"
-            leaveFrom="opacity-100"        
+            leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
             <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-25" />
@@ -35,7 +36,18 @@ export default function MyModal({ isOpen, setUnderDev }:any) {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="bg-white p-6 rounded-lg shadow-xl">
+            <motion.div
+              animate={{
+                scale: [0.5, 1.1, 1],
+                backgroundColor: "#ffffff",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+                position: "fixed",
+                transitionEnd: {
+                  display: "none",
+                },
+              }}
+              className="bg-white p-6 rounded-lg shadow-xl"
+            >
               <Dialog.Title
                 as="h3"
                 className="text-lg font-medium leading-6 text-gray-900"
@@ -57,7 +69,7 @@ export default function MyModal({ isOpen, setUnderDev }:any) {
                   Got it, thanks!
                 </button>
               </div>
-            </div>
+            </motion.div>
           </Transition.Child>
         </Dialog>
       </Transition>
