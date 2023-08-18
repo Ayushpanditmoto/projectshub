@@ -75,7 +75,7 @@ function MyInfo() {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="0"
+                      strokeWidth="0"
                       viewBox="0 0 512 512"
                       className="h-5 w-5"
                       height="1em"
@@ -97,7 +97,7 @@ function MyInfo() {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="0"
+                      strokeWidth="0"
                       viewBox="0 0 576 512"
                       className="h-5 w-5"
                       height="1em"
@@ -119,7 +119,7 @@ function MyInfo() {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="0"
+                      strokeWidth="0"
                       viewBox="0 0 448 512"
                       className="h-5 w-5"
                       height="1em"
@@ -140,7 +140,7 @@ function MyInfo() {
             <svg
                stroke="currentColor"
                fill="currentColor"
-               stroke-width="0"
+               strokeWidth="0"
                viewBox="0 0 448 512"
                className="h-5 w-5"
                height="1em"

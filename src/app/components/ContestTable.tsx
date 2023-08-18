@@ -1,9 +1,13 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { Contest } from '../types/contest';
+"use client";
+import React, { useState, useEffect } from "react";
+import { Contest } from "../types/contest";
 
-const ContestsList = ({ apiUrl, platformName }:{
-    apiUrl:string, platformName:string
+const ContestsList = ({
+  apiUrl,
+  platformName,
+}: {
+  apiUrl: string;
+  platformName: string;
 }) => {
   const [contests, setContests] = useState([]);
 
@@ -23,14 +27,14 @@ const ContestsList = ({ apiUrl, platformName }:{
 
   const getCurrentTimestamp = () => Date.now();
 
-  const isContestOngoing = (contest:Contest) => {
+  const isContestOngoing = (contest: Contest) => {
     const startTime = new Date(contest.start_time).getTime();
     const endTime = new Date(contest.end_time).getTime();
     const currentTime = getCurrentTimestamp();
     return startTime <= currentTime && currentTime <= endTime;
   };
 
-  const isContestUpcoming = (contest:Contest) => {
+  const isContestUpcoming = (contest: Contest) => {
     const startTime = new Date(contest.start_time).getTime();
     const currentTime = getCurrentTimestamp();
     return startTime > currentTime;
@@ -42,15 +46,15 @@ const ContestsList = ({ apiUrl, platformName }:{
       <div className="overflow-x-auto">
         <table className="w-full border-collapse mt-4">
           <tbody>
-            {contests.map((contest:Contest) => (
+            {contests.map((contest: Contest) => (
               <tr
                 key={contest.name}
                 className={`${
                   isContestOngoing(contest)
-                    ? 'bg-green-100'
+                    ? "bg-green-100"
                     : isContestUpcoming(contest)
-                    ? 'bg-yellow-100'
-                    : 'bg-red-100'
+                    ? "bg-yellow-100"
+                    : "bg-red-100"
                 }`}
               >
                 <td className="py-2 px-4 border border-gray-300">
@@ -60,30 +64,30 @@ const ContestsList = ({ apiUrl, platformName }:{
                     rel="noopener noreferrer"
                     className={`text-sm font-bold ${
                       isContestOngoing(contest)
-                        ? 'text-green-600'
+                        ? "text-green-600"
                         : isContestUpcoming(contest)
-                        ? 'text-yellow-600'
-                        : 'text-red-600'
+                        ? "text-yellow-600"
+                        : "text-red-600"
                     } hover:underline`}
                   >
                     {contest.name}
                   </a>
                   <div className="text-sm">
-                    {new Date(contest.start_time).toLocaleString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric',
-                      hour: 'numeric',
-                      minute: 'numeric',
+                    {new Date(contest.start_time).toLocaleString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
                       hour12: true,
                     })}
                     <br />
-                    {new Date(contest.end_time).toLocaleString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric',
-                      hour: 'numeric',
-                      minute: 'numeric',
+                    {new Date(contest.end_time).toLocaleString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
                       hour12: true,
                     })}
                   </div>
