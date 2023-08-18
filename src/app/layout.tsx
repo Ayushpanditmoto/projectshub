@@ -29,7 +29,7 @@ export default function RootLayout({
         <Header />
        <PostMenu />
         <CenterLayout>
-          <MyInfo />
+          {/* <MyInfo /> */}
          <MyTabs />
            
         {children}
