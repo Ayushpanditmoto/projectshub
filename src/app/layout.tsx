@@ -24,13 +24,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-       <PostMenu />
-        <CenterLayout>
+       {/* <PostMenu /> */}
+        {/* <CenterLayout> */}
           {/* <MyInfo /> */}
          {/* <MyTabs /> */}
            
         {children}
-       </CenterLayout>
+       {/* </CenterLayout> */}
 
         <Newsletter />
         <Footer />

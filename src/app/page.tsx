@@ -5,6 +5,7 @@ import PostMenu from "./components/PostMenu";
 export default function Home() {
   return (
     <>
+    <PostMenu/>
     </>
   );
 }
