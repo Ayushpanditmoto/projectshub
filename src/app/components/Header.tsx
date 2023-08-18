@@ -18,20 +18,20 @@ import MyModal from "./Dialog";
 import Link from "next/link";
 
 const products = [
-  { name: "Python Projects", description: "", href: "#", icon: FaPython },
-  { name: "Flutter Projects", description: "", href: "#", icon: MdFlutterDash },
+  { name: "Python Projects", description: "", href: "/", icon: FaPython },
+  { name: "Flutter Projects", description: "", href: "/", icon: MdFlutterDash },
   {
     name: "React Js & NextJs Projects",
     description: "",
-    href: "#",
+    href: "/",
     icon: FaReact,
   },
-  { name: "Backend Projects", description: "", href: "#", icon: AiTwotoneApi },
-  { name: "Other Projects", description: "", href: "#", icon: ArrowPathIcon },
+  { name: "Backend Projects", description: "", href: "/", icon: AiTwotoneApi },
+  { name: "Other Projects", description: "", href: "/", icon: ArrowPathIcon },
 ];
 const callsToAction = [
-  { name: "View All", href: "#", icon: PlayCircleIcon },
-  { name: "Freelance", href: "#", icon: PhoneIcon },
+  { name: "View All", href: "/", icon: PlayCircleIcon },
+  { name: "Freelance", href: "/", icon: PhoneIcon },
 ];
 
 function classNames(...classes: string[]) {
@@ -41,15 +41,15 @@ function classNames(...classes: string[]) {
 const Header: { name: string; href: string }[] = [
   {
     name: "Project",
-    href: "#",
+    href: "/",
   },
   {
     name: "Client Work",
-    href: "#",
+    href: "/",
   },
   {
     name: "Upcoming Events",
-    href: "#",
+    href: "/",
   },
   {
     name: "Coding Contest",
@@ -218,6 +218,7 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
@@ -230,6 +231,7 @@ export default function Example() {
                 {Header.slice(1).map((item) => (
                   <Link
                     key={item.name}
+                    onClick={() => setMobileMenuOpen(false)}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
@@ -238,12 +240,6 @@ export default function Example() {
                 ))}
               </div>
               <div className="py-6">
-                {/* <Link
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </Link> */}
                 <button onClick={
                   () => setUnderDev(true)
                 } className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
