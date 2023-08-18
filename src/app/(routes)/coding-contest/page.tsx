@@ -1,6 +1,6 @@
 
-import CenterLayout from '../components/CenterLayout';
-import ContestsList from './../components/ContestTable';
+import CenterLayout from '../../components/CenterLayout';
+import ContestsList from '../../components/ContestTable';
 
 const App = () => {
   return (
