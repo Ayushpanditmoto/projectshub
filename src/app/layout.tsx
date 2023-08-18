@@ -7,6 +7,7 @@ import Newsletter from './components/Newsletter';
 import Header from './components/Header';
 import CenterLayout from './components/CenterLayout';
 import PostMenu from './components/PostMenu';
+import { ReduxProvider } from '@/redux/provider';
 
 const inter = Quicksand({ subsets: ['latin'] })
 
@@ -23,17 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ReduxProvider>
         <Header />
-       {/* <PostMenu /> */}
-        {/* <CenterLayout> */}
-          {/* <MyInfo /> */}
-         {/* <MyTabs /> */}
-           
         {children}
-       {/* </CenterLayout> */}
-
         <Newsletter />
         <Footer />
+      </ReduxProvider>
         </body>
       <Analytics />
     </html>
