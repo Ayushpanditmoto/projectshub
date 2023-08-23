@@ -73,7 +73,7 @@ export default function Example() {
             <span className="sr-only">Projectshub</span>
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src="https://i.ibb.co/rxRr5h9/logo2-png.png"
               alt=""
             />
           </Link>
@@ -241,11 +241,11 @@ export default function Example() {
               </div>
               <div className="py-6">
                 <button onClick={
-                  () =>{ 
-                    
+                  () => {
+
                     setUnderDev(true)
                     setMobileMenuOpen(false)
-                  
+
                   }
                 } className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   Log in
