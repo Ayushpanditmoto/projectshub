@@ -1,8 +1,11 @@
 
 import CenterLayout from '../../components/CenterLayout';
 import ContestsList from '../../components/ContestTable';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
+  
 
 
   return (
