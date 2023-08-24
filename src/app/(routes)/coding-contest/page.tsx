@@ -1,9 +1,8 @@
 
 import CenterLayout from '../../components/CenterLayout';
 import ContestsList from '../../components/ContestTable';
-import { useAppSelector } from '@/redux/store';
+
 const App = () => {
-  const { Leetcode,Codeforces,Codechef } = useAppSelector((state) => state.coding);
   return (
     <CenterLayout>
     <div className="container mx-auto px-4 sm:px-8">

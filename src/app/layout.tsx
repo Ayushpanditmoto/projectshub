@@ -22,16 +22,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+        <ReduxProvider>
     <html lang="en">
       <body className={inter.className}>
-        <ReduxProvider>
         <Header />
         {children}
         <Newsletter />
         <Footer />
-      </ReduxProvider>
         </body>
       <Analytics />
     </html>
+      </ReduxProvider>
   )
 }
