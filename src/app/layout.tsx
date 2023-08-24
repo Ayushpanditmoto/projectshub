@@ -7,7 +7,7 @@ import Newsletter from './components/Newsletter';
 import Header from './components/Header';
 import CenterLayout from './components/CenterLayout';
 import PostMenu from './components/PostMenu';
-import { ReduxProvider } from '@/redux/provider';
+import { ReduxProvider } from '../redux/provider';
 
 const inter = Quicksand({ subsets: ['latin'] })
 
