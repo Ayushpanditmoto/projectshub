@@ -1,13 +1,13 @@
+import { TypedUseSelectorHook } from "./../../node_modules/react-redux/es/types.d";
 import { configureStore } from "@reduxjs/toolkit";
+import { useSelector } from "react-redux";
 import authReducer from "./features/auth-slice";
 import codingReducer from "./features/coding contest/codingSlice";
-import { useSelector } from "react-redux";
-import { TypedUseSelectorHook } from "./../../node_modules/react-redux/es/types.d";
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
-    coding: codingReducer,
+    authReducer,
+    codingReducer,
   },
 });
 

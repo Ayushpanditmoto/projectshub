@@ -1,11 +1,21 @@
-
+"use client"
+import { AppDispatch, RootState, useAppSelector } from '@/redux/store';
 import CenterLayout from '../../components/CenterLayout';
 import ContestsList from '../../components/ContestTable';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
-import { useDispatch } from 'react-redux';
-
+import { useDispatch ,useSelector} from 'react-redux';
+import { use, useEffect } from 'react';
 const App = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const {Codechef,Codeforces,Leetcode} = useAppSelector((state) => state.codingReducer);
+  console.log(Codechef);
+  console.log(Codeforces);
+  console.log(Leetcode);
   
+  useEffect(() => {
+    dispatch({type:"coding/fetchCodeforceContest"});
+    dispatch({type:"coding/fetchCodechefContest"});
+    dispatch({type:"coding/fetchLeeCodeContest"});
+  }, []);
 
 
   return (

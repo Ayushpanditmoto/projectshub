@@ -1,4 +1,3 @@
-"use client";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -21,16 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ReduxProvider>
-      <html lang="en">
+    <html lang="en">
         <body className={inter.className}>
+        <ReduxProvider>
           <Header />
           {children}
           <Newsletter />
           <Footer />
+    </ReduxProvider>
         </body>
         <Analytics />
       </html>
-    </ReduxProvider>
   );
 }

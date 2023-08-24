@@ -1,22 +1,23 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { Contest } from "../../../types/contest";
 
 interface CodingContestState {
   Leetcode: {
-    leetcode: any[];
+    leetcode: Contest[];
     isLoading: boolean;
     isError: boolean;
     isSuccessful: boolean;
     message: string;
   };
   Codechef: {
-    codechef: any[];
+    codechef: Contest[];
     isLoading: boolean;
     isError: boolean;
     isSuccessful: boolean;
     message: string;
   };
   Codeforces: {
-    codeforces: any[];
+    codeforces: Contest[];
     isLoading: boolean;
     isError: boolean;
     isSuccessful: boolean;
@@ -48,9 +49,7 @@ const initialState: CodingContestState = {
   },
 };
 
-const Api: {
-  [key: string]: string;
-} = {
+const Api: any = {
   Leetcode: "https://kontests.net/api/v1/leet_code",
   Codechef: "https://kontests.net/api/v1/code_chef",
   Codeforces: "https://kontests.net/api/v1/codeforces",
@@ -59,6 +58,7 @@ const Api: {
 export const fetchLeeCodeContest = createAsyncThunk<any[], void>(
   "coding/fetchLeeCodeContest",
   async () => {
+    console.log("fetching leetcode contest");
     const response = await fetch(Api.Leetcode);
     const data = await response.json();
     return data;
@@ -68,6 +68,7 @@ export const fetchLeeCodeContest = createAsyncThunk<any[], void>(
 export const fetchCodechefContest = createAsyncThunk<any[], void>(
   "coding/fetchCodechefContest",
   async () => {
+    console.log("fetching codechef contest");
     const response = await fetch(Api.Codechef);
     const data = await response.json();
     return data;
@@ -77,13 +78,14 @@ export const fetchCodechefContest = createAsyncThunk<any[], void>(
 export const fetchCodeforceContest = createAsyncThunk<any[], any>(
   "coding/fetchCodeforceContest",
   async () => {
+    console.log("fetching codeforce contest");
     const response = await fetch(Api.Codeforces);
     const data = await response.json();
     return data;
   }
 );
 
-const codingContest = createSlice({
+export const codingContest = createSlice({
   name: "coding",
   initialState,
   reducers: {
@@ -136,4 +138,5 @@ const codingContest = createSlice({
   },
 });
 
+export const { resetContest } = codingContest.actions;
 export default codingContest.reducer;

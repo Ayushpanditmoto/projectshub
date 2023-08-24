@@ -40,6 +40,8 @@ const ContestsList = ({
     return startTime > currentTime;
   };
 
+  const randomString = () => Math.random().toString(36).substring(7);
+
   return (
     <div className="my-8">
       <h2 className="text-2xl font-bold">{platformName} Contests</h2>
@@ -48,7 +50,7 @@ const ContestsList = ({
           <tbody>
             {contests.map((contest: Contest) => (
               <tr
-                key={contest.name}
+                key={contest.name+randomString()}
                 className={`${
                   isContestOngoing(contest)
                     ? "bg-green-100"
