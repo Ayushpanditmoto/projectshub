@@ -48,41 +48,43 @@ const initialState: CodingContestState = {
   },
 };
 
-const Api: any = {
-  fetchCodeforceContest: async () => {
-    const response = await fetch("https://kontests.net/api/v1/codeforces");
-    const data: CodingContestState = await response.json();
-    return data;
-  },
-  fetchLeeCodeContest: async () => {
-    const response = await fetch("https://kontests.net/api/v1/leet_code");
-    const data: CodingContestState = await response.json();
-    return data;
-  },
-  fetchCodechefContest: async () => {
-    const response = await fetch("https://kontests.net/api/v1/code_chef");
-    const data: CodingContestState = await response.json();
-    return data;
-  },
+const Api: {
+  [key: string]: string;
+} = {
+  Leetcode: "https://kontests.net/api/v1/leet_code",
+  Codechef: "https://kontests.net/api/v1/code_chef",
+  Codeforces: "https://kontests.net/api/v1/codeforces",
 };
 
 export const fetchLeeCodeContest = createAsyncThunk<any[], void>(
-  "codingContest/fetchLeeCodeContest",
-  Api.fetchLeeCodeContest
+  "coding/fetchLeeCodeContest",
+  async () => {
+    const response = await fetch(Api.Leetcode);
+    const data = await response.json();
+    return data;
+  }
 );
 
 export const fetchCodechefContest = createAsyncThunk<any[], void>(
-  "codingContest/fetchCodechefContest",
-  Api.fetchCodechefContest
+  "coding/fetchCodechefContest",
+  async () => {
+    const response = await fetch(Api.Codechef);
+    const data = await response.json();
+    return data;
+  }
 );
 
-export const fetchCodeforceContest = createAsyncThunk<any[], void>(
-  "codingContest/fetchCodeforceContest",
-  Api.fetchCodeforceContest
+export const fetchCodeforceContest = createAsyncThunk<any[], any>(
+  "coding/fetchCodeforceContest",
+  async () => {
+    const response = await fetch(Api.Codeforces);
+    const data = await response.json();
+    return data;
+  }
 );
 
 const codingContest = createSlice({
-  name: "codingContest",
+  name: "coding",
   initialState,
   reducers: {},
   extraReducers: (builder) => {

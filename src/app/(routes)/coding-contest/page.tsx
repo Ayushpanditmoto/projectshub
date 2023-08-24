@@ -3,6 +3,8 @@ import CenterLayout from '../../components/CenterLayout';
 import ContestsList from '../../components/ContestTable';
 
 const App = () => {
+
+
   return (
     <CenterLayout>
     <div className="container mx-auto px-4 sm:px-8">
