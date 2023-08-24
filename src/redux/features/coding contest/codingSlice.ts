@@ -3,21 +3,21 @@ import { Contest } from "../../../types/contest";
 
 interface CodingContestState {
   Leetcode: {
-    leetcode: Contest[];
+    data: Contest[];
     isLoading: boolean;
     isError: boolean;
     isSuccessful: boolean;
     message: string;
   };
   Codechef: {
-    codechef: Contest[];
+    data: Contest[];
     isLoading: boolean;
     isError: boolean;
     isSuccessful: boolean;
     message: string;
   };
   Codeforces: {
-    codeforces: Contest[];
+    data: Contest[];
     isLoading: boolean;
     isError: boolean;
     isSuccessful: boolean;
@@ -27,21 +27,21 @@ interface CodingContestState {
 
 const initialState: CodingContestState = {
   Leetcode: {
-    leetcode: [],
+    data: [],
     isLoading: false,
     isError: false,
     isSuccessful: false,
     message: "",
   },
   Codechef: {
-    codechef: [],
+    data: [],
     isLoading: false,
     isError: false,
     isSuccessful: false,
     message: "",
   },
   Codeforces: {
-    codeforces: [],
+    data: [],
     isLoading: false,
     isError: false,
     isSuccessful: false,
@@ -61,6 +61,7 @@ export const fetchLeeCodeContest = createAsyncThunk<any[], void>(
     console.log("fetching leetcode contest");
     const response = await fetch(Api.Leetcode);
     const data = await response.json();
+    console.log(`leetcode data: ${data}`);
     return data;
   }
 );
@@ -71,16 +72,18 @@ export const fetchCodechefContest = createAsyncThunk<any[], void>(
     console.log("fetching codechef contest");
     const response = await fetch(Api.Codechef);
     const data = await response.json();
+    console.log(`codechef data: ${data}`);
     return data;
   }
 );
 
-export const fetchCodeforceContest = createAsyncThunk<any[], any>(
+export const fetchCodeforceContest = createAsyncThunk<any[], void>(
   "coding/fetchCodeforceContest",
   async () => {
     console.log("fetching codeforce contest");
-    const response = await fetch(Api.Codeforces);
+    const response = await fetch(`https://kontests.net/api/v1/codeforces`);
     const data = await response.json();
+    console.log(`codeforce data: ${data}`);
     return data;
   }
 );
@@ -103,7 +106,7 @@ export const codingContest = createSlice({
       .addCase(fetchLeeCodeContest.fulfilled, (state, action) => {
         state.Leetcode.isLoading = false;
         state.Leetcode.isSuccessful = true;
-        state.Leetcode.leetcode = action.payload;
+        state.Leetcode.data = action.payload;
       })
       .addCase(fetchLeeCodeContest.rejected, (state) => {
         state.Leetcode.isLoading = false;
@@ -116,7 +119,7 @@ export const codingContest = createSlice({
       .addCase(fetchCodechefContest.fulfilled, (state, action) => {
         state.Codechef.isLoading = false;
         state.Codechef.isSuccessful = true;
-        state.Codechef.codechef = action.payload;
+        state.Codechef.data = action.payload;
       })
       .addCase(fetchCodechefContest.rejected, (state) => {
         state.Codechef.isLoading = false;
@@ -129,7 +132,7 @@ export const codingContest = createSlice({
       .addCase(fetchCodeforceContest.fulfilled, (state, action) => {
         state.Codeforces.isLoading = false;
         state.Codeforces.isSuccessful = true;
-        state.Codeforces.codeforces = action.payload;
+        state.Codeforces.data = action.payload;
       })
       .addCase(fetchCodeforceContest.rejected, (state) => {
         state.Codeforces.isLoading = false;
