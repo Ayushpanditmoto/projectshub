@@ -8,6 +8,7 @@ import Header from './components/Header';
 import CenterLayout from './components/CenterLayout';
 import PostMenu from './components/PostMenu';
 import { ReduxProvider } from '@/redux/provider';
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 const inter = Quicksand({ subsets: ['latin'] })
 
@@ -22,16 +23,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ReduxProvider>
-        <Header />
-        {children}
-        <Newsletter />
-        <Footer />
-      </ReduxProvider>
+    <UserProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <ReduxProvider>
+            <Header />
+            {children}
+            <Newsletter />
+            <Footer />
+          </ReduxProvider>
         </body>
-      <Analytics />
-    </html>
+        <Analytics />
+      </html>
+    </UserProvider>
   )
 }
