@@ -1,3 +1,4 @@
+
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next'
@@ -10,19 +11,21 @@ import PostMenu from './components/PostMenu';
 import { ReduxProvider } from '@/redux/provider';
 import { UserProvider } from '@auth0/nextjs-auth0/client';
 
-const inter = Quicksand({ subsets: ['latin'] })
+
+const inter = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'ProjectsHub',
-  description: 'ProjectsHub is a blog by ProjectsHub.',
-}
+  title: "ProjectsHub",
+  description: "ProjectsHub is a blog by ProjectsHub.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
+
     <UserProvider>
       <html lang="en">
         <body className={inter.className}>

@@ -4,7 +4,7 @@ function Footer() {
     const Year = new Date().getFullYear();
   return (
     <>
-      <footer className="mx-auto max-w-7xl overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <footer className="mx-auto font-semibold max-w-7xl overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
           <div className="px-5 py-2">
             <Link
