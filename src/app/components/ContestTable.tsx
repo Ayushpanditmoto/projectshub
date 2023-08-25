@@ -34,9 +34,9 @@ const ContestsList = ({
 
   const randomString = () => Math.random().toString(36).substring(7);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
   if (isError) {
     return <div>Error: {data.message}</div>;
@@ -46,6 +46,28 @@ const ContestsList = ({
     return (
       <div className="my-8">
         <h2 className="text-2xl font-bold">{platformName} Contests</h2>
+       {
+          contestsData.length > 0 && (
+            <div className="text-sm text-gray-500">
+              {contestsData.length} {platformName} contests found.
+            </div>
+          )
+        }{
+          isLoading && (
+            // Shimmer effect
+            <div className="animate-pulse">
+              <div className="flex space-x-4">
+                <div className="flex-1 space-y-4 py-1">
+                  <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+                  <div className="space-y-2">
+                    <div className="h-4 bg-gray-300 rounded"></div>
+                    <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        }
         <div className="overflow-x-auto">
           <table className="w-full border-collapse mt-4">
             <tbody>
