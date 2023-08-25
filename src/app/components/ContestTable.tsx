@@ -44,7 +44,7 @@ const ContestsList = ({
 
   if (isSuccessful) {
     return (
-      <div className="my-8">
+      <div className="my-8 ">
         <h2 className="text-2xl font-bold">{platformName} Contests</h2>
        {
           contestsData.length > 0 && !isLoading && (
@@ -55,8 +55,8 @@ const ContestsList = ({
         }{
           isLoading && ShimmerEffect()
         }
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse mt-4">
+        <div className="overflow-x-auto ">
+          <table className="w-full shadow-lg border-collapse mt-4">
             <tbody>
               {contestsData.map((contest: Contest) => (
                 <tr
