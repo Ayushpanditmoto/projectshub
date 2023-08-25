@@ -5,6 +5,8 @@ function upcomingEvents() {
     return (
         <>
             <h1>Upcoming Events</h1>
+            {/* requires component dedicated to upcoming events */}
+
         </>
     )
 }

@@ -4,7 +4,7 @@ import React from 'react'
 function clientWork() {
   return (
     <>
-      <h1>Client Work</h1>
+      {/* Requires component dedicated to client work  */}
     </>
   )
 }
