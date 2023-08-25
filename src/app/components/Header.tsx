@@ -46,17 +46,18 @@ const Header: { name: string; href: string }[] = [
   },
   {
     name: "Client Work",
-    href: "/",
+    href: "/client-work",
   },
   {
     name: "Upcoming Events",
-    href: "/",
+    href: "/upcoming-events",
   },
   {
     name: "Coding Contest",
     href: "/coding-contest",
   },
 ];
+
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
