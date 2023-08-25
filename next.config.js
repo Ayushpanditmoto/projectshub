@@ -5,6 +5,7 @@ const nextConfig = {
       "localhost",
       "res.cloudinary.com",
       "images.unsplash.com",
+      "unsplash.com",
       "cdn.pixabay.com",
       "cdn.statically.io",
       "source.unsplash.com",
