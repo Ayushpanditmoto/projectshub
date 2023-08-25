@@ -47,7 +47,7 @@ const ContestsList = ({
       <div className="my-8">
         <h2 className="text-2xl font-bold">{platformName} Contests</h2>
        {
-          contestsData.length > 0 && (
+          contestsData.length > 0 && !isLoading && (
             <div className="text-sm text-gray-500">
               {contestsData.length} {platformName} contests found.
             </div>
