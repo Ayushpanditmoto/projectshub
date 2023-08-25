@@ -4,6 +4,7 @@ import PostMenu from '../../components/PostMenu'
 function About() {
   return (
     <>
+      About Page
     </>
   )
 }
