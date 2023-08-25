@@ -70,12 +70,15 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Projectshub</span>
+            {/* <span className="sr-only">Projectshub</span>
             <img
               className="h-8 w-auto"
               src="https://i.ibb.co/rxRr5h9/logo2-png.png"
               alt=""
-            />
+            /> */}
+            <h2 className="text-2xl font-extrabold">
+              Projects<span className="text-indigo-600">Hub</span>
+            </h2>
           </Link>
         </div>
         <div className="flex lg:hidden">
