@@ -53,20 +53,7 @@ const ContestsList = ({
             </div>
           )
         }{
-          isLoading && (
-            // Shimmer effect
-            <div className="animate-pulse">
-              <div className="flex space-x-4">
-                <div className="flex-1 space-y-4 py-1">
-                  <div className="h-4 bg-gray-300 rounded w-3/4"></div>
-                  <div className="space-y-2">
-                    <div className="h-4 bg-gray-300 rounded"></div>
-                    <div className="h-4 bg-gray-300 rounded w-5/6"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
+          isLoading && ShimmerEffect()
         }
         <div className="overflow-x-auto">
           <table className="w-full border-collapse mt-4">
@@ -128,5 +115,21 @@ const ContestsList = ({
 
   return null; // Handle other cases or return null if none of the conditions are met.
 };
+
+const ShimmerEffect = () => {
+  return (
+    <div className="animate-pulse">
+      <div className="flex space-x-4">
+        <div className="flex-1 space-y-4 py-1">
+          <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+          <div className="space-y-2">
+            <div className="h-4 bg-gray-300 rounded"></div>
+            <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default ContestsList;
