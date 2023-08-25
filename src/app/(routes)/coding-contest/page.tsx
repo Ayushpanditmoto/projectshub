@@ -13,9 +13,12 @@ const App = () => {
  
   
   useEffect(() => {
-   dispatch(fetchCodechefContest());
-    dispatch(fetchCodeforceContest());
-    dispatch(fetchLeeCodeContest());
+   
+      dispatch(fetchCodechefContest());
+      dispatch(fetchLeeCodeContest());
+      dispatch(fetchCodeforceContest());
+   
+   
   }, []);
 
 
