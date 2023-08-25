@@ -102,6 +102,7 @@ export const codingContest = createSlice({
     builder
       .addCase(fetchLeeCodeContest.pending, (state) => {
         state.Leetcode.isLoading = true;
+        state.Leetcode.data = initialState.Leetcode.data;
       })
       .addCase(fetchLeeCodeContest.fulfilled, (state, action) => {
         state.Leetcode.isLoading = false;
@@ -115,6 +116,7 @@ export const codingContest = createSlice({
     builder
       .addCase(fetchCodechefContest.pending, (state) => {
         state.Codechef.isLoading = true;
+        state.Codechef.data = initialState.Codechef.data;
       })
       .addCase(fetchCodechefContest.fulfilled, (state, action) => {
         state.Codechef.isLoading = false;
@@ -128,6 +130,7 @@ export const codingContest = createSlice({
     builder
       .addCase(fetchCodeforceContest.pending, (state) => {
         state.Codeforces.isLoading = true;
+        state.Codeforces.data = initialState.Codeforces.data;
       })
       .addCase(fetchCodeforceContest.fulfilled, (state, action) => {
         state.Codeforces.isLoading = false;
