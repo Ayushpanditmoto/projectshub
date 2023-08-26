@@ -1,19 +1,27 @@
-"use client";
-import React from "react";
-import CenterLayout from "@/app/components/CenterLayout";
-import { useRouter, useParams } from "next/navigation";
+import BlogPost from '../../../components/BlogPost';
+import CenterLayout from '../../../components/CenterLayout';
+import fs from "fs";
+import Markdown from "markdown-to-jsx";
 
-function SingleBlog() {
-  const param = useParams();
-  console.log(param.slug);
-  return (
-    <div>
-      <CenterLayout>
-        <h1>Single Blog</h1>
-        <h2>{param.slug}</h2>
-      </CenterLayout>
-    </div>
-  );
+
+const getPostContent = (slug: string) => {
+    const folder = "blog/";
+    const file = `${folder}${slug}.md`;
+    const content = fs.readFileSync(file, "utf8");
+    return content;
 }
 
-export default SingleBlog;
+const PostPage = (props: any) => {
+    const slug = props.params.slug;
+    const content = getPostContent(slug);
+    return (
+        <CenterLayout>
+            <h1>This is: {slug}</h1>
+            <Markdown>{content}</Markdown>
+            <BlogPost />
+        </CenterLayout>
+    )
+}
+
+export default PostPage;
+

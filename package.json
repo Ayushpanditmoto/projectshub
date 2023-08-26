@@ -24,6 +24,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "framer-motion": "^10.16.0",
+    "markdown-to-jsx": "^7.3.2",
     "next": "13.4.10",
     "postcss": "8.4.26",
     "react": "18.2.0",
@@ -34,6 +35,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/mdx": "^2.0.7",
     "prisma": "^5.1.1"
   }
 }
