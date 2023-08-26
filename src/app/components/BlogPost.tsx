@@ -2,12 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import fs from "fs";
+const path = require('path');
+
 
 const getPostMetadata = () => {
     // grabbing blog posts from posts dir
-    const folder = "src/posts";
+    const directoryPath = path.join(__dirname, 'Documents');
+    console.log(directoryPath)
+    const folder = "blog/";
     const files = fs.readdirSync(folder);
-    console.log("HERE" + files)
+
 
     // filter for only posts ending in .md
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
@@ -22,7 +26,7 @@ function BlogPost() {
     const postMetadata = getPostMetadata();
     const postPreviews = postMetadata.map((slug) => (
         <div key={slug}>
-            <Link href={`/posts/${slug}`}>
+            <Link href={`/blog/${slug}`}>
                 <h2>{slug} Hello!</h2>
             </Link>
         </div>
