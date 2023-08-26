@@ -17,7 +17,6 @@ import {
 import MyModal from "./Dialog";
 import Link from "next/link";
 
-
 const products = [
   { name: "Python Projects", description: "", href: "/", icon: FaPython },
   { name: "Flutter Projects", description: "", href: "/", icon: MdFlutterDash },
@@ -58,11 +57,9 @@ const Header: { name: string; href: string }[] = [
   },
 ];
 
-
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [underDev, setUnderDev] = useState(false);
-
 
   return (
     <header className="bg-white">
@@ -78,7 +75,7 @@ export default function Example() {
               src="https://i.ibb.co/rxRr5h9/logo2-png.png"
               alt=""
             /> */}
-            <h2 className="text-2xl font-extrabold">
+            <h2 className="text-2xl text-black font-extrabold">
               Projects<span className="text-indigo-600">Hub</span>
             </h2>
           </Link>
@@ -167,9 +164,10 @@ export default function Example() {
           ))}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button onClick={
-            () => setUnderDev(true)
-          } className="text-sm font-semibold leading-6 text-gray-900">
+          <button
+            onClick={() => setUnderDev(true)}
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
           </button>
           <MyModal isOpen={underDev} setUnderDev={setUnderDev} />
@@ -245,14 +243,13 @@ export default function Example() {
                 ))}
               </div>
               <div className="py-6">
-                <button onClick={
-                  () => {
-
-                    setUnderDev(true)
-                    setMobileMenuOpen(false)
-
-                  }
-                } className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                <button
+                  onClick={() => {
+                    setUnderDev(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
                   Log in
                 </button>
                 <MyModal isOpen={underDev} setUnderDev={setUnderDev} />
