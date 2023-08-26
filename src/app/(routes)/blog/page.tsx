@@ -1,9 +1,14 @@
-import React from 'react'
+import CenterLayout from "@/app/components/CenterLayout";
+import React from "react";
 
 function AllBlog() {
   return (
-    <div>AllBlog</div>
-  )
+    <>
+      <CenterLayout>
+        <div>AllBlog</div>
+      </CenterLayout>
+    </>
+  );
 }
 
-export default AllBlog
+export default AllBlog;
