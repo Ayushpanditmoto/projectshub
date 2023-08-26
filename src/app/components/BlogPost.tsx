@@ -7,12 +7,8 @@ const path = require('path');
 
 const getPostMetadata = () => {
     // grabbing blog posts from posts dir
-    const directoryPath = path.join(__dirname, 'Documents');
-    console.log(directoryPath)
     const folder = "blog/";
     const files = fs.readdirSync(folder);
-
-
     // filter for only posts ending in .md
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
     // remove .md from name for slug
