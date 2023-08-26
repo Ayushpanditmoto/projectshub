@@ -27,7 +27,7 @@ function Newsletter() {
                   type="email"
                   name="member[email]"
                   id="member_email"
-                  className="w-full rounded-md border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-0"
+                  className="w-full rounded-md text-gray-500 border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-0"
                   placeholder="Enter your email"
                 />
                 <button
