@@ -24,3 +24,4 @@ const PostPage = (props: any) => {
 }
 
 export default PostPage;
+

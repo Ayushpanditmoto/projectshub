@@ -3,34 +3,45 @@ import Image from "next/image";
 
 function Card() {
   return (
-    <>
-      <div className="flex flex-col overflow-hidden rounded-lg shadow-md">
-        <div className="flex-shrink-0">
-          <a href="/internet/gmail-auto-purge/27605/">
-            <Image
-              loading="lazy"
-              className="h-40 w-full object-cover"
-              width={300}
-              height={200}
-              src="https://source.unsplash.com/random/250x160?/internet/gmail-auto-purge/27605/"
-              alt="How to Delete Older Emails in Gmail Automatically"
-            />
-          </a>
+    <div className="w-full max-w-sm mx-auto">
+      <div className="bg-white shadow-md rounded-md overflow-hidden">
+        {/* Blog post image */}
+        <div className="relative h-52">
+          <Image
+            src="https://unsplash.com/photos/wX2L8L-fGeA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8Z2l0aHVifGVufDB8fHx8MTY5Mjk4MzkxNnww&force=true&w=2400" // Replace with your image URL
+            alt="Blog Post"
+            fill
+            priority
+            style={{ objectFit: "cover" }}
+          />
         </div>
-        <div className="flex flex-1 flex-col justify-between bg-slate-50 py-5 px-4">
-          <div className="flex-1">
-            <p className="text-xs font-medium text-gray-500">
-              <time dateTime="September 17, 2018">September 17, 2018</time>
-            </p>
-            <a className="mt-2 block" href="/internet/gmail-auto-purge/27605/">
-              <p className="text-sm font-semibold leading-5 text-gray-700">
-                How to Delete Older Emails in Gmail Automatically
-              </p>
-            </a>
+
+        {/* Blog post content */}
+        <div className="p-4">
+          <h2 className="text-xl font-semibold text-gray-800">
+            Blog Post Title
+          </h2>
+          <p className="text-gray-600 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            tristique, justo et laoreet aliquet.
+          </p>
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <Image
+                src="https://unsplash.com/photos/iEEBWgY_6lA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8dXNlcnxlbnwwfHx8fDE2OTI5ODQ5MDF8MA&force=true&w=640" // Replace with author's avatar
+                alt="Author"
+                width={24}
+                height={24}
+                className="rounded-full"
+                style={{ objectFit: "cover" }}
+              />
+              <span className="text-gray-700 ml-2">Author Name</span>
+            </div>
+            <span className="text-gray-500">Published on: July 26, 2023</span>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

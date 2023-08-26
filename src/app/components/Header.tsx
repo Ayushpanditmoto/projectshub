@@ -45,11 +45,11 @@ const Header: { name: string; href: string }[] = [
   },
   {
     name: "Client Work",
-    href: "/",
+    href: "/client-work",
   },
   {
     name: "Upcoming Events",
-    href: "/",
+    href: "/upcoming-events",
   },
   {
     name: "Coding Contest",
@@ -61,7 +61,6 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [underDev, setUnderDev] = useState(false);
 
-
   return (
     <header className="bg-white">
       <nav
@@ -70,12 +69,15 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Projectshub</span>
+            {/* <span className="sr-only">Projectshub</span>
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src="https://i.ibb.co/rxRr5h9/logo2-png.png"
               alt=""
-            />
+            /> */}
+            <h2 className="text-2xl text-black font-extrabold">
+              Projects<span className="text-indigo-600">Hub</span>
+            </h2>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -162,9 +164,10 @@ export default function Example() {
           ))}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button onClick={
-            () => setUnderDev(true)
-          } className="text-sm font-semibold leading-6 text-gray-900">
+          <button
+            onClick={() => setUnderDev(true)}
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
           </button>
           <MyModal isOpen={underDev} setUnderDev={setUnderDev} />
@@ -240,14 +243,13 @@ export default function Example() {
                 ))}
               </div>
               <div className="py-6">
-                <button onClick={
-                  () =>{ 
-                    
-                    setUnderDev(true)
-                    setMobileMenuOpen(false)
-                  
-                  }
-                } className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                <button
+                  onClick={() => {
+                    setUnderDev(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
                   Log in
                 </button>
                 <MyModal isOpen={underDev} setUnderDev={setUnderDev} />
