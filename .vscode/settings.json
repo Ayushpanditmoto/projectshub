@@ -1,3 +1,6 @@
 {
-  "dotenv.enableAutocloaking": false
+  "dotenv.enableAutocloaking": false,
+  "files.exclude": {
+    "**/node_modules": true
+  }
 }

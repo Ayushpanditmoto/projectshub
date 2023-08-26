@@ -8,13 +8,13 @@ function Card() {
         {/* Blog post image */}
         <div className="relative h-52">
           <Image
-            src="https://unsplash.com/photos/cpvC2ki47e8/download?ixid=M3wxMjA3fDB8MXxhbGx8NDB8fHx8fHwyfHwxNjkzMDM1MDEwfA&force=true&w=2400" // Replace with your image URL
+            src="https://unsplash.com/photos/wX2L8L-fGeA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8Z2l0aHVifGVufDB8fHx8MTY5Mjk4MzkxNnww&force=true&w=2400" // Replace with your image URL
             alt="Blog Post"
             layout="fill"
             objectFit="cover"
           />
         </div>
-        
+
         {/* Blog post content */}
         <div className="p-4">
           <h2 className="text-xl font-semibold text-gray-800">
