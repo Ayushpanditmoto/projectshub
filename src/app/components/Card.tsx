@@ -10,8 +10,9 @@ function Card() {
           <Image
             src="https://unsplash.com/photos/wX2L8L-fGeA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8Z2l0aHVifGVufDB8fHx8MTY5Mjk4MzkxNnww&force=true&w=2400" // Replace with your image URL
             alt="Blog Post"
-            layout="fill"
-            objectFit="cover"
+            fill
+            priority
+            style={{ objectFit: "cover" }}
           />
         </div>
 
@@ -29,9 +30,10 @@ function Card() {
               <Image
                 src="https://unsplash.com/photos/iEEBWgY_6lA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8dXNlcnxlbnwwfHx8fDE2OTI5ODQ5MDF8MA&force=true&w=640" // Replace with author's avatar
                 alt="Author"
-                width={40}
-                height={40}
+                width={24}
+                height={24}
                 className="rounded-full"
+                style={{ objectFit: "cover" }}
               />
               <span className="text-gray-700 ml-2">Author Name</span>
             </div>
