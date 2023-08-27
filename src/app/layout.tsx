@@ -3,12 +3,12 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { UserProvider } from "@auth0/nextjs-auth0/client";
+// import { UserProvider } from "@auth0/nextjs-auth0/client";
 import AppWrap from "./AppWrap";
 
-const inter = Poppins({
+const poppins = Poppins({
   weight: ["400", "600"],
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
@@ -22,13 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <UserProvider>
-      <html lang="en" suppressHydrationWarning={true}>
-        <body className={inter.className} suppressHydrationWarning={true}>
-          <AppWrap>{children}</AppWrap>
-        </body>
-        <Analytics />
-      </html>
-    </UserProvider>
+    // <UserProvider>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={poppins.className} suppressHydrationWarning={true}>
+        <AppWrap>{children}</AppWrap>
+      </body>
+      <Analytics />
+    </html>
+    // </UserProvider>
   );
 }

@@ -23,6 +23,17 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/_app.js", "src/app/api/api.js", "src/app/api/auth/[..auth0]/route.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/api/_app.js",
+    "src/app/api/api.js",
+    "src/app/api/auth/[..auth0]/route.js",
+    "src/lib/mdx/index.js",
+    "src/app/(routes)/blog/page.jsx",
+    "src/app/(routes)/blog/[slug]/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }
