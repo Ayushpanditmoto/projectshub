@@ -42,76 +42,73 @@ const ContestsList = ({
     return <div>Error: {data.message}</div>;
   }
 
-  if (isSuccessful) {
-    return (
-      <div className="my-8 ">
-        <h2 className="text-2xl font-bold">{platformName} Contests</h2>
-       {
-          contestsData.length > 0 && !isLoading && (
-            <div className="text-sm text-gray-500">
-              {contestsData.length} {platformName} contests found.
-            </div>
-          )
-        }{
-          isLoading && ShimmerEffect()
-        }
-        <div className="overflow-x-auto ">
-          <table className="w-full shadow-lg border-collapse mt-4">
-            <tbody>
-              {contestsData.map((contest: Contest) => (
-                <tr
-                  key={contest.name + randomString()}
-                  className={`${
-                    isContestOngoing(contest)
-                      ? "bg-green-100"
-                      : isContestUpcoming(contest)
-                      ? "bg-yellow-100"
-                      : "bg-red-100"
-                  }`}
-                >
-                  <td className="py-2 px-4 border border-gray-300">
-                    <a
-                      href={contest.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-sm font-bold ${
-                        isContestOngoing(contest)
-                          ? "text-green-600"
-                          : isContestUpcoming(contest)
-                          ? "text-yellow-600"
-                          : "text-red-600"
-                      } hover:underline`}
-                    >
-                      {contest.name}
-                    </a>
-                    <div className="text-sm">
-                      {new Date(contest.start_time).toLocaleString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                        hour: "numeric",
-                        minute: "numeric",
-                        hour12: true,
-                      })}
-                      <br />
-                      {new Date(contest.end_time).toLocaleString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                        hour: "numeric",
-                        minute: "numeric",
-                        hour12: true,
-                      })}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+  // if (isSuccessful) {
+  return (
+    <div className="my-8 ">
+      <h2 className="text-2xl font-bold">{platformName} Contests</h2>
+      {contestsData.length > 0 && !isLoading && (
+        <div className="text-sm text-gray-500">
+          {contestsData.length} {platformName} contests found.
         </div>
+      )}
+      {isLoading && ShimmerEffect()}
+      <div className="overflow-x-auto ">
+        <table className="w-full shadow-lg border-collapse mt-4">
+          <tbody>
+            {contestsData.map((contest: Contest) => (
+              <tr
+                key={contest.name + randomString()}
+                className={`${
+                  isContestOngoing(contest)
+                    ? "bg-green-100"
+                    : isContestUpcoming(contest)
+                    ? "bg-yellow-100"
+                    : "bg-red-100"
+                }`}
+              >
+                <td className="py-2 px-4 border border-gray-300">
+                  <a
+                    href={contest.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm font-bold ${
+                      isContestOngoing(contest)
+                        ? "text-green-600"
+                        : isContestUpcoming(contest)
+                        ? "text-yellow-600"
+                        : "text-red-600"
+                    } hover:underline`}
+                  >
+                    {contest.name}
+                  </a>
+                  <div className="text-sm">
+                    {new Date(contest.start_time).toLocaleString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
+                      hour12: true,
+                    })}
+                    <br />
+                    {new Date(contest.end_time).toLocaleString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
+                      hour12: true,
+                    })}
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    );
-  }
+    </div>
+  );
+  // }
 
   return null; // Handle other cases or return null if none of the conditions are met.
 };
@@ -130,6 +127,6 @@ const ShimmerEffect = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ContestsList;
