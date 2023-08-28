@@ -17,7 +17,7 @@ const Page = async ({ params }) => {
   return (
     <CenterLayout>
       <section className="py-5">
-        <div className="container py-4 prose">{content}</div>
+        <div className="container py-4 prose prose-slate">{content}</div>
       </section>
     </CenterLayout>
   );
