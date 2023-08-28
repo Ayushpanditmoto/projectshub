@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Page() {
   return (
-    <div className="container mx-auto max-w-6xl">
+    <div className="container p-5 mx-auto max-w-6xl">
       <div className="flex flex-col items-center justify-center lg:justify-between space-y-8 lg:space-y-0 ">
         <div className="flex items-center justify-center mx-auto">
           <Image
