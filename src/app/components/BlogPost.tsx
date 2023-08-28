@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import fs from "fs";
-const path = require("path");
 
 const getPostMetadata = () => {
   // grabbing blog posts from posts dir

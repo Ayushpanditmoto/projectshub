@@ -5,10 +5,7 @@ import Events from "../../components/Events";
 function Event() {
     return (
         <>
-            <CenterLayout>
-                <h1>Event</h1>
-                <Events />
-            </CenterLayout>
+            <Events />
         </>
     );
 }
