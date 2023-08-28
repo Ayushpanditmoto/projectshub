@@ -8,6 +8,5 @@ function Event() {
             <Events />
         </>
     );
-}
-
+};
 export default Event;
