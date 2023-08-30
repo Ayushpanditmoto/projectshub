@@ -48,8 +48,8 @@ const Header: { name: string; href: string }[] = [
     href: "/client-work",
   },
   {
-    name: "Online Assesments",
-    href: "/online-assesments",
+    name: "Upcoming Events",
+    href: "/upcoming-events",
   },
   {
     name: "Coding Contest",
