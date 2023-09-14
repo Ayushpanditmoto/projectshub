@@ -22,13 +22,13 @@ function Page() {
               Seems like you’ve landed in the wrong page. Don’t worry, We’ve got
               you. Let’s take you back to where it’s safe.
             </p>
-            <div className="py-1">
-              <Link href="/">
+            <Link href="/">
+              <div className="py-1">
                 <p className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full">
                   Take me back Home
                 </p>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
