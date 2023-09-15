@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 const axios = require("axios");
 const cheerio = require("cheerio");
 
@@ -59,6 +60,6 @@ async function scrapeContestInfo() {
 //   console.log(contests);
 // });
 
-export async function GET(res: Response) {
+export async function GET(res: NextResponse) {
   return Response.json(await scrapeContestInfo());
 }
