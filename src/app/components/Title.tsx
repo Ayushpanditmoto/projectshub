@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tittle({title,desc}:{title:string,desc:string,
+function Title({title,desc}:{title:string,desc:string,
 }) {
   return (
     <div className="absolute inset-0 flex justify-center items-center h-36 opacity-90 lg:h-48 title">
@@ -18,4 +18,4 @@ function Tittle({title,desc}:{title:string,desc:string,
   );
 }
 
-export default Tittle;
+export default Title;

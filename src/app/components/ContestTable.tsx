@@ -159,13 +159,13 @@ const ContestRow = ({ contest }: { contest: Contest }) => {
 
   return (
     <tr
-      className={getRowClass()}
+      className={`${getRowClass()} flex rounded-lg my-3`} 
       key={contest.url}
       style={{
         transition: "all .15s ease",
       }}
     >
-      <td className="py-2 px-4 border-separate rounded-lg">
+      <td className="py-2 px-4 border-separate">
         <a
           href={contest.url}
           target="_blank"
@@ -180,12 +180,14 @@ const ContestRow = ({ contest }: { contest: Contest }) => {
         >
           {contest.name}
         </a>
+        
         <div className="text-sm">
           {formatDate(contest.start_time)} <br />
           {formatDate(contest.end_time)}
         </div>
       </td>
     </tr>
+    
   );
 };
 
@@ -221,7 +223,7 @@ const ContestsList = ({
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full shadow-lg border-none mt-4">
-            <tbody>
+            <tbody className="my-3">
               {contestsData.map((contest) => (
                 <ContestRow key={contest.url} contest={contest} />
               ))}
