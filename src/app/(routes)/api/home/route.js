@@ -37,10 +37,10 @@ async function scrapeContestInfo() {
     const response = await axios.get("https://leetcode.com/contest/");
     const $ = cheerio.load(response.data);
 
-    const contestInfo: any = [];
+    const contestInfo = [];
 
     // Select each contest card and extract information
-    $(".swiper-slide").each((index: number, element: any) => {
+    $(".swiper-slide").each((index, element) => {
       const title = $(element).find(".font-medium").text().trim();
 
       const date = getNextWeekend();
@@ -60,6 +60,6 @@ async function scrapeContestInfo() {
 //   console.log(contests);
 // });
 
-export async function GET(res: NextResponse) {
+export async function GET(res) {
   return Response.json(await scrapeContestInfo());
 }

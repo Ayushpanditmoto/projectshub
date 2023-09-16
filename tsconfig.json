@@ -33,7 +33,8 @@
     "src/app/api/auth/[..auth0]/route.js",
     "src/lib/mdx/index.js",
     "src/app/(routes)/blog/page.jsx",
-    "src/app/(routes)/blog/[slug]/page.jsx"
+    "src/app/(routes)/blog/[slug]/page.jsx",
+    "src/app/(routes)/api/home/route.js"
   ],
   "exclude": ["node_modules"]
 }
