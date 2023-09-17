@@ -34,7 +34,7 @@
     "src/lib/mdx/index.js",
     "src/app/(routes)/blog/page.jsx",
     "src/app/(routes)/blog/[slug]/page.jsx",
-    "src/app/(routes)/api/home/route.js"
+    "src/app/(routes)/api/leetcode/route.js"
   ],
   "exclude": ["node_modules"]
 }

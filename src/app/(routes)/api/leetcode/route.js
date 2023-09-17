@@ -1,6 +1,12 @@
-import { NextResponse } from "next/server";
 const axios = require("axios");
 const cheerio = require("cheerio");
+
+const getCurrentDateTime = () => {
+  const now = new Date();
+  // Format the date as "YYYY-MM-DD HH:mm:ss"
+  const formattedDate = now.toISOString().slice(0, 19).replace("T", " ");
+  return formattedDate;
+};
 
 const getNextWeekend = () => {
   const today = new Date();
@@ -48,7 +54,11 @@ async function scrapeContestInfo() {
       if (index < 2) contestInfo.push({ title, date: date[index] });
     });
 
-    return contestInfo.slice(0, 2);
+    // return contestInfo.slice(0, 2);
+    return {
+      last_updated: getCurrentDateTime(),
+      data: contestInfo.slice(0, 2),
+    };
   } catch (error) {
     console.error("Error scraping contest information:", error);
     return [];
