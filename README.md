@@ -16,11 +16,11 @@ ProjectsHub Platform is your all-in-one destination for hackathons, coding conte
 
 ## How to Get Started
 
-1. Explore the [Hackathons](hackathons/) section to discover and register for upcoming hackathons.
-2. Check out the [Coding Contests](coding-contests/) area to challenge yourself with coding puzzles.
-3. Get inspired by the [Project Ideas](project-ideas/) collection and bring your ideas to life.
-4. Browse through [Freelancing](freelancing/) tasks to find opportunities that match your skills.
-5. Join the [Community](community/) discussions and collaborate with like-minded individuals.
+1. Explore the [Hackathons]() section to discover and register for upcoming hackathons.
+2. Check out the [Coding Contests]() area to challenge yourself with coding puzzles.
+3. Get inspired by the [Project Ideas]() collection and bring your ideas to life.
+4. Browse through [Freelancing]() tasks to find opportunities that match your skills.
+5. Join the [Community]() discussions and collaborate with like-minded individuals.
 
 ## Contribution Guidelines
 
@@ -28,7 +28,7 @@ We welcome contributions from the community! Whether it's adding new hackathons,
 
 ## Connect with Us
 
-- Join our [Discord Community](https://discord.example.com) for discussions and updates.
-- Follow us on [Twitter](https://twitter.com/projectshub) for the latest news.
+- Join our [Discord Community]() for discussions and updates.
+- Follow us on [Twitter]() for the latest news.
 
 Let's innovate, collaborate, and create something amazing together on ProjectsHub Platform!
