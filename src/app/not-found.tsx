@@ -10,8 +10,8 @@ function Page() {
           <Image
             alt="404"
             src="/static/error.png"
-            width={430}
-            height={430}
+            width={400}
+            height={400}
             className="h-90 w-90"
           />
         </div>
