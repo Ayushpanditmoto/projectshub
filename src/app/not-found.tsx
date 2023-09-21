@@ -21,8 +21,9 @@ function Page() {
               Oops! Page not found.
             </h1>
             <p className="text-center lg:text-center py-8 text-md md:text-2xl lg:text-xl">
-              Seems like you've landed in the wrong page. Don't worry, We've got
-              you. Let's take you back to where it's safe.
+              Seems like you&apos;ve landed in the wrong page. Don&apos;t worry,
+              We&apos;ve got you. Let&apos;s take you back to where it&apos;s
+              safe.
             </p>
             <Link href="/">
               <div className="py-1">
