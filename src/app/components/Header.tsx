@@ -18,16 +18,16 @@ import MyModal from "./Dialog";
 import Link from "next/link";
 
 const products = [
-  { name: "Python Projects", description: "", href: "/", icon: FaPython },
-  { name: "Flutter Projects", description: "", href: "/", icon: MdFlutterDash },
+  { name: "Python Projects", description: "", href: "/phyton", icon: FaPython },
+  { name: "Flutter Projects", description: "", href: "/flutter", icon: MdFlutterDash },
   {
     name: "React Js & NextJs Projects",
     description: "",
-    href: "/",
+    href: "/react-next",
     icon: FaReact,
   },
-  { name: "Backend Projects", description: "", href: "/", icon: AiTwotoneApi },
-  { name: "Other Projects", description: "", href: "/", icon: ArrowPathIcon },
+  { name: "Backend Projects", description: "", href: "/backend", icon: AiTwotoneApi },
+  { name: "Other Projects", description: "", href: "/other", icon: ArrowPathIcon },
 ];
 const callsToAction = [
   { name: "View All", href: "/", icon: PlayCircleIcon },
