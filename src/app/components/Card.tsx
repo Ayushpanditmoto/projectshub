@@ -39,7 +39,7 @@ function Card() {
                 />
                 <span className="text-gray-700 ml-2">Author Name</span>
               </div>
-              <span className="text-gray-500">Published on: July 26, 2023</span>
+              <span className="text-gray-500">July 26, 2023</span>
             </div>
           </div>
         </div>
