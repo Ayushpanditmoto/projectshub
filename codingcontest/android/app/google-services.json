@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "679139633584",
+    "project_id": "coding-contest-c1fcf",
+    "storage_bucket": "coding-contest-c1fcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679139633584:android:4d039a624f688b9a004e75",
+        "android_client_info": {
+          "package_name": "com.pandit.contest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiXZfIaDA-JP1cyvTwyTshpjKqdiDXHN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

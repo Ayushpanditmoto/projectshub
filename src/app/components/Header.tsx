@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useState } from "react";
+import { Fragment, use, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -19,15 +19,30 @@ import Link from "next/link";
 
 const products = [
   { name: "Python Projects", description: "", href: "/phyton", icon: FaPython },
-  { name: "Flutter Projects", description: "", href: "/flutter", icon: MdFlutterDash },
+  {
+    name: "Flutter Projects",
+    description: "",
+    href: "/flutter",
+    icon: MdFlutterDash,
+  },
   {
     name: "React Js & NextJs Projects",
     description: "",
     href: "/react-next",
     icon: FaReact,
   },
-  { name: "Backend Projects", description: "", href: "/backend", icon: AiTwotoneApi },
-  { name: "Other Projects", description: "", href: "/other", icon: ArrowPathIcon },
+  {
+    name: "Backend Projects",
+    description: "",
+    href: "/backend",
+    icon: AiTwotoneApi,
+  },
+  {
+    name: "Other Projects",
+    description: "",
+    href: "/other",
+    icon: ArrowPathIcon,
+  },
 ];
 const callsToAction = [
   { name: "View All", href: "/", icon: PlayCircleIcon },

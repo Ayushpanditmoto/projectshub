@@ -1,4 +1,4 @@
-package com.example.codingcontest
+package com.pandit.contest
 
 import io.flutter.embedding.android.FlutterActivity
 
