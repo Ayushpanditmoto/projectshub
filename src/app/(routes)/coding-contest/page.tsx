@@ -10,6 +10,7 @@ import {
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Link from "next/link";
+import Image from 'next/image'
 
 // Reusable component for displaying colored guide
 const ColourGuide = () => {
@@ -46,8 +47,8 @@ const FourButton = () => {
         <Link
           key={index}
           href={link.href}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-7 rounded w-full sm:w-auto"
-        >
+          className="text-gray-900 bg-gray-200 inline-flex hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-base px-5 py-2.5 text-center dark:focus:ring-gray-500 items-center w-full sm:w-auto">
+          <Image src={`./icons/fourbuttons/${link.href.slice(1)}.svg`} alt={link.text} width={24} height={24} className="mr-1.5" />
           {link.text}
         </Link>
       ))}
