@@ -1,75 +1,53 @@
 import Link from "next/link";
 
 function Footer() {
-    const Year = new Date().getFullYear();
+  const Year = new Date().getFullYear();
+
+  const footerLinks = [
+    {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Code",
+      href: "/category/code",
+    },
+    {
+      name: "Contact",
+      href: "/",
+    },
+    {
+      name: "Privacy",
+      href: "/privacy",
+    },
+    {
+      name: "Setup",
+      href: "/",
+    },
+    {
+      name: "Sitemap",
+      href: "/sitemap",
+    },
+  ];
+
   return (
     <>
       <footer className="mx-auto font-semibold max-w-7xl overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
-          <div className="px-5 py-2">
-            <Link
-              className="text-base text-gray-500 hover:text-gray-900"
-              title="Learn more about us"
-              href="/about"
-            >
-              About
-            </Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link
-              className="text-base text-gray-500 hover:text-gray-900"
-              title="Programming and Code Snippets"
-              href="/category/code"
-            >
-              Code
-            </Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link
-              target="_blank"
-              rel="noopener noreferrer "
-              href="/"
-              className="text-base text-gray-500 hover:text-gray-900"
-              title="Get in touch"
-            >
-              Contact
-            </Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link
-              className="text-base text-gray-500 hover:text-gray-900"
-              title="Privacy policy"
-              href="/privacy"
-            >
-              Privacy
-            </Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link
-              className="text-base text-gray-500 hover:text-gray-900"
-              title="Software and Hardware I use"
-              href="/"
-            >
-              Setup
-            </Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link
-              className="text-base text-gray-500 hover:text-gray-900"
-              title="Sitemap index"
-              href="/sitemap"
-            >
-              Sitemap
-            </Link>
-          </div>
+          {footerLinks.map((link) => (
+            <div key={link.name} className="px-5 py-2">
+              <Link
+                className="text-base text-gray-500 hover:text-gray-900"
+                title={link.name}
+                href={link.href}
+              >
+                {link.name}
+              </Link>
+            </div>
+          ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
-          <Link
-            target="_blank"
-            rel="noopener noreferrer "
-            href=""
-            title=""
-          >
+          <Link target="_blank" rel="noopener noreferrer " href="" title="">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -137,7 +115,8 @@ function Footer() {
           </Link>
         </div>
         <p className="mt-8 text-center text-sm text-gray-500">
-          ©{Year===2023? "2023": "2023 - "+Year} ProjectsHub ® All rights reserved.
+          ©{Year === 2023 ? "2023" : "2023 - " + Year} ProjectsHub ® All rights
+          reserved.
         </p>
       </footer>
     </>
