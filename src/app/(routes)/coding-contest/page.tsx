@@ -42,12 +42,12 @@ const FourButton = () => {
   ];
 
   return (
-    <div className="flex flex-col space-y-2 py-6 sm:flex-row sm:space-x-2 sm:space-y-0">
+    <div className="flex flex-wrap gap-y-2 sm:gap-x-2 flex-col py-6 sm:flex-row">
       {buttonLinks.map((link, index) => (
         <Link
           key={index}
           href={link.href}
-          className="text-gray-900 bg-gray-200 inline-flex hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-base px-5 py-2.5 text-center dark:focus:ring-gray-500 items-center w-full sm:w-auto">
+          className="text-gray-900 bg-gray-200 inline-flex hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-base px-5 py-2.5 text-center dark:focus:ring-gray-500 items-center sm:flex-grow sm:basis-1/3 md:basis-auto">
           <Image src={`./icons/fourbuttons/${link.href.slice(1)}.svg`} alt={link.text} width={24} height={24} className="mr-1.5" />
           {link.text}
         </Link>
