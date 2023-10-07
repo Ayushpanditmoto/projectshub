@@ -38,3 +38,8 @@ next-env.d.ts
 .vercel
 
 .vscode
+
+backend/venv
+backend/__pycache__
+backend/.pytest_cache
+backend/log.txt
