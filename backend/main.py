@@ -1,6 +1,9 @@
 from datetime import datetime
 import time
 from fastapi import FastAPI, Request
+from contestScrap  import scrapeContestInfo
+
+result = scrapeContestInfo()
 
 app = FastAPI()
 
@@ -35,6 +38,21 @@ async def add_process_time_header(request: Request, call_next):
 async def root():
     return {"Server": "Api Server is running",
             "status": "200",
+            "routes": ["/api/v1/leetcode", "/api/v1/codeforces", "/api/v1/codechef"],
             "message": "Success",
             "time": datetime.now(),
             }
+    
+    
+@app.get("/api/v1/leetcode")
+async def leetcode():
+    return scrapeContestInfo
+
+@app.get("/api/v1/codeforces")
+async def codeforces():
+    return scrapeContestInfo
+
+@app.get("/api/v1/codechef")
+async def codechef():
+    return scrapeContestInfo
+
