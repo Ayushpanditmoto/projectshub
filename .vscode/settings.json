@@ -2,5 +2,6 @@
   "dotenv.enableAutocloaking": false,
   "files.exclude": {
     "**/node_modules": true
-  }
+  },
+  "cmake.sourceDirectory": "C:/Users/offic/OneDrive/Desktop/projectshub/codingcontest/linux"
 }
