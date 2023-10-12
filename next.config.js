@@ -24,6 +24,19 @@ const nextConfig = {
       "source.unsplash.com",
     ],
   },
+  future: {
+    webpack5: true,   
+  },
+
+  webpack(config) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,  
+
+      fs: false, // the solution
+    };
+    
+    return config;
+  },
 };
 
 module.exports = withMDX(nextConfig);

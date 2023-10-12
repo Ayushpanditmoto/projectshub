@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllPostsMeta } from "@/lib/mdx";
 
 const Page = async () => {
-  const posts = await getAllPostsMeta();
+  const posts = await getAllPostsMeta({BlogPath: "backend"});
 
   return (
     <section className="py-12">
